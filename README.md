@@ -1,34 +1,18 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Mascotas Olavarría
 
-## Getting Started
+Mascotas Olavarría es una página web diseñada para ayudar a encontrar hogares a perros y gatos en situación de adopción en la ciudad de Olavarría, provincia de Buenos Aires. Además, permite a las protectoras de animales registradas promocionar sus mascotas y eventos, así como también recibir donaciones y brindar información sobre cómo colaborar.
 
-First, run the development server:
+## Características
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+- Búsqueda y publicación de perros y gatos en adopción.
+- Sección dedicada a las protectoras de mascotas para registrar sus organizaciones, promocionar mascotas, eventos, y recibir donaciones.
+- Opciones de colaboración: donaciones, voluntariado, traslados, tránsito.
+- Listado de servicios relacionados con mascotas en la ciudad, como veterinarias y petshops.
+- Información de contacto de emergencia, veterinarias y otros recursos útiles.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Tecnologías utilizadas
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- Next.js
+- Next.js API Routes.
+- Prisma ORM
+- PostgreSQL
