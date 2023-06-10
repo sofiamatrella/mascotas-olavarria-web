@@ -8,18 +8,19 @@ datasource db {
 }
 
 model User {
-  id         Int    @id @default(autoincrement())
-  externalId String @unique @default(uuid())
-  role       Role   @default(USER)
+  id         Int       @id @default(autoincrement())
+  externalId String    @unique @default(uuid())
+  role       Role      @default(USER)
   password   String
   username   String
   email      String
   posts      Pet[]
+  Shelter    Shelter[]
 }
 
 model Pet {
   id          Int      @id @default(autoincrement())
-  externalId  String   @default(uuid())
+  externalId  String   @unique @default(uuid())
   species     Species
   name        String
   sex         Sex
@@ -31,6 +32,27 @@ model Pet {
   User        User     @relation(fields: [userId], references: [externalId])
   userId      String
   createdAt   DateTime @default(now())
+}
+
+model Shelter {
+  id          Int      @id @default(autoincrement())
+  externalId  String   @unique @default(uuid())
+  name        String
+  contact     String[]
+  description String
+  events      Event[]
+  user        User     @relation(fields: [userId], references: [externalId])
+  userId      String
+  logo        String
+}
+
+model Event {
+  id          Int      @id @default(autoincrement())
+  externalId  String   @unique @default(uuid())
+  shelter     Shelter  @relation(fields: [shelterId], references: [externalId])
+  shelterId   String
+  description String
+  date        DateTime
 }
 
 enum Role {
