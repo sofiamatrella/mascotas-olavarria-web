@@ -1,8 +1,6 @@
 import Header from "@/components/Header";
 import "./globals.css";
-import { Inter } from "next/font/google";
-
-const inter = Inter({ subsets: ["latin"] });
+import { inter, poppins, raleway } from "./fonts";
 
 export const metadata = {
   title: "Mascotas Olavarría",
@@ -15,7 +13,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="es">
+    <html lang="es" className={`${poppins.variable} ${raleway.variable}`}>
       <body className={inter.className}>
         <Header />
         {children}

@@ -36,6 +36,7 @@
   border-radius: 0.25rem;
   padding: 6px 24px;
   background-color: #dde5b6;
-  font-family: "Poppins", sans-serif;
+  font-family: var(--poppins-font);
+  font-weight: 700;
   font-size: 1rem;
 }
