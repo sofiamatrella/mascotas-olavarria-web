@@ -1,6 +1,6 @@
 import Header from "@/components/Header";
 import "./globals.css";
-import { inter, poppins, raleway } from "./fonts";
+import { poppins, raleway } from "./fonts";
 
 export const metadata = {
   title: "Mascotas Olavarría",

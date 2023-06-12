@@ -1,7 +1,6 @@
 "use client";
 
 import styles from "../styles/Header.module.css";
-import useScrollPosition from "@/hooks/useScrollPosition";
 import MenuDropdown from "./MenuDropdown";
 import { HeartIcon, MegaphoneIcon } from "@heroicons/react/24/outline";
 import Page from "@/models/Menu";
@@ -45,14 +44,8 @@ const pages: Page[] = [
 ];
 
 export default function Header() {
-  const scrollPosition = useScrollPosition();
-
   return (
-    <header
-      className={
-        scrollPosition < 10 ? styles.container : styles.container_scroll
-      }
-    >
+    <header className={styles.container}>
       <Link href="/">
         <img src="/images/logo.png" alt="Logo" width="55px" />
       </Link>
