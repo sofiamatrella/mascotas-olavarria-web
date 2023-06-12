@@ -14,7 +14,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="es" className={`${poppins.variable} ${raleway.variable}`}>
-      <body className={inter.className}>
+      <body className={raleway.className}>
         <Header />
         {children}
       </body>
