@@ -1,0 +1,39 @@
+.container {
+  height: calc(100vh - 110px);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+}
+
+.title {
+  font-size: 3rem;
+  font-family: var(--poppins-font);
+  font-weight: 500;
+}
+.image_text_container {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+
+.text_container {
+  width: 100%;
+}
+
+.text {
+  font-family: var(--poppins-font);
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+
+.text_bold {
+  font-weight: 700;
+}
+
+.image_container {
+  width: 50%;
+}
