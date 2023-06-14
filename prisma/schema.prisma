@@ -8,14 +8,14 @@ datasource db {
 }
 
 model User {
-  id         Int       @id @default(autoincrement())
-  externalId String    @unique @default(uuid())
-  role       Role      @default(USER)
+  id         Int      @id @default(autoincrement())
+  externalId String   @unique @default(uuid())
+  role       Role     @default(USER)
   password   String
-  username   String
-  email      String
+  username   String   @unique
+  email      String   @unique
   posts      Pet[]
-  Shelter    Shelter[]
+  Shelter    Shelter?
 }
 
 model Pet {
@@ -42,7 +42,7 @@ model Shelter {
   description String
   events      Event[]
   user        User     @relation(fields: [userId], references: [externalId])
-  userId      String
+  userId      String   @unique
   logo        String
 }
 
