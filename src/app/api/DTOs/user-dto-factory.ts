@@ -6,6 +6,9 @@ class UserDTOFactory {
       username: user.username,
       email: user.email,
       password: password,
+      firstName: user.firstName,
+      lastName: user.lastName,
+      profilePicture: user.profilePicture,
     };
   }
 }
