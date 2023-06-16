@@ -8,14 +8,17 @@ datasource db {
 }
 
 model User {
-  id         Int      @id @default(autoincrement())
-  externalId String   @unique @default(uuid())
-  role       Role     @default(USER)
-  password   String
-  username   String   @unique
-  email      String   @unique
-  posts      Pet[]
-  Shelter    Shelter?
+  id             Int      @id @default(autoincrement())
+  externalId     String   @unique @default(uuid())
+  role           Role     @default(USER)
+  password       String
+  username       String   @unique
+  email          String   @unique
+  posts          Pet[]
+  shelter        Shelter?
+  firstName      String
+  lastName       String
+  profilePicture String
 }
 
 model Pet {
