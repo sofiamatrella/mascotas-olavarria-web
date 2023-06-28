@@ -25,7 +25,7 @@ export async function POST(request: Request) {
   }
 
   if (userExists) {
-    return NextResponse.json({ error: "Usuario en uso." }, { status: 409 });
+    return NextResponse.json({ message: "Usuario en uso." }, { status: 409 });
   }
 
   const salt = await bcrypt.genSalt(10);
@@ -42,7 +42,7 @@ export async function POST(request: Request) {
   } catch (error) {
     console.log(error);
     return NextResponse.json(
-      { error: "Internal Server Error" },
+      { message: "Internal Server Error" },
       { status: 500 }
     );
   }
