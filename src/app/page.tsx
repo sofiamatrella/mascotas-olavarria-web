@@ -25,7 +25,7 @@ const register = async () => {
 };
 
 export default async function Home() {
-  const user = await register();
+  // const user = await register();
 
   return (
     <main className={styles.main}>
