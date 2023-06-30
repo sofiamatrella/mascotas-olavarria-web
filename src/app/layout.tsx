@@ -1,4 +1,3 @@
-import Header from "@/components/Header";
 import "./globals.css";
 import { poppins, raleway } from "./fonts";
 
@@ -14,10 +13,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="es" className={`${poppins.variable} ${raleway.variable}`}>
-      <body className={raleway.className}>
-        <Header />
-        {children}
-      </body>
+      <body className={raleway.className}>{children}</body>
     </html>
   );
 }

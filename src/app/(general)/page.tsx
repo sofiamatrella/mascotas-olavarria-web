@@ -4,7 +4,7 @@ import AboutUs from "@/components/AboutUs";
 import FAQ from "@/components/FAQ";
 
 const register = async () => {
-  const res = await fetch("http://localhost:3000/api/users/login", {
+  const res = await fetch(`${process.env.API_URL}/users/login`, {
     method: "POST",
     body: JSON.stringify({
       email: "sofia.matrella@gmail.com",
