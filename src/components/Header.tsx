@@ -66,7 +66,7 @@ export default function Header() {
           />
         ))}
       </nav>
-      {!isLoggedIn ? (
+      {isLoggedIn ? (
         <UserCircleIcon width="45px" color="#435021" />
       ) : (
         <Link href="/login" className={styles.button}>
