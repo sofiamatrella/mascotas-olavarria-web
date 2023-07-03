@@ -8,6 +8,7 @@ import Page from "@/models/Menu";
 import Link from "next/link";
 import { useContext, useEffect } from "react";
 import LoggedContext from "@/context/LoggedContext";
+import MobileMenu from "./MobileMenu";
 
 const pages: Page[] = [
   {
@@ -73,6 +74,9 @@ export default function Header() {
           Iniciar sesión
         </Link>
       )}
+      <div className={styles.mobile_menu}>
+        <MobileMenu pages={pages} />
+      </div>
     </header>
   );
 }

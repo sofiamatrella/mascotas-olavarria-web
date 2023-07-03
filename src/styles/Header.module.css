@@ -66,3 +66,35 @@
   font-weight: 700;
   font-size: 1rem;
 }
+
+.mobile_menu {
+  display: none;
+}
+
+@media (320px <= width <= 480px) {
+  .navigation {
+    display: none;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .mobile_menu {
+    display: flex;
+  }
+
+  .container {
+    justify-content: space-between;
+  }
+
+  .button {
+    padding: 6px 18px;
+    font-size: 0.75rem;
+    position: absolute;
+    right: 4.5rem;
+  }
+
+  .button:hover {
+    padding: 6px 18px;
+    font-size: 0.75rem;
+  }
+}
