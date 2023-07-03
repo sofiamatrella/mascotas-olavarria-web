@@ -3,8 +3,11 @@
 import styles from "../styles/Header.module.css";
 import MenuDropdown from "./MenuDropdown";
 import { HeartIcon, MegaphoneIcon } from "@heroicons/react/24/outline";
+import { UserCircleIcon } from "@heroicons/react/20/solid";
 import Page from "@/models/Menu";
 import Link from "next/link";
+import { useContext, useEffect } from "react";
+import LoggedContext from "@/context/LoggedContext";
 
 const pages: Page[] = [
   {
@@ -44,6 +47,8 @@ const pages: Page[] = [
 ];
 
 export default function Header() {
+  const { isLoggedIn, handleLogIn } = useContext(LoggedContext);
+
   return (
     <header className={styles.container}>
       <Link href="/">
@@ -61,9 +66,13 @@ export default function Header() {
           />
         ))}
       </nav>
-      <Link href="/login" className={styles.button}>
-        Iniciar sesión
-      </Link>
+      {!isLoggedIn ? (
+        <UserCircleIcon width="45px" color="#435021" />
+      ) : (
+        <Link href="/login" className={styles.button}>
+          Iniciar sesión
+        </Link>
+      )}
     </header>
   );
 }

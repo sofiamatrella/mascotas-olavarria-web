@@ -11,10 +11,6 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <LoggedProvider>
-      <div className={`${poppins.variable} ${raleway.variable}`}>
-        {children}
-      </div>
-    </LoggedProvider>
+    <div className={`${poppins.variable} ${raleway.variable}`}>{children}</div>
   );
 }

@@ -1,5 +1,6 @@
 import "./globals.css";
 import { poppins, raleway } from "./fonts";
+import { LoggedProvider } from "@/context/LoggedContext";
 
 export const metadata = {
   title: "Mascotas Olavarría",
@@ -13,7 +14,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="es" className={`${poppins.variable} ${raleway.variable}`}>
-      <body className={raleway.className}>{children}</body>
+      <body className={raleway.className}>
+        <LoggedProvider>{children}</LoggedProvider>
+      </body>
     </html>
   );
 }
