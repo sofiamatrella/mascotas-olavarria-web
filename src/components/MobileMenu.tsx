@@ -86,7 +86,11 @@ export default function MobileMenu({ pages }: { pages: Page[] }) {
                   Inicio
                 </a>
                 {pages.map((page) => (
-                  <Disclosure as="div" className={styles.disclosure}>
+                  <Disclosure
+                    as="div"
+                    className={styles.disclosure}
+                    key={page.name}
+                  >
                     {({ open }) => (
                       <>
                         <Disclosure.Button className={styles.disclosure_button}>
