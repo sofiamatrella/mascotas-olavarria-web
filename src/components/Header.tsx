@@ -61,7 +61,9 @@ export default function Header() {
           />
         ))}
       </nav>
-      <button className={styles.button}> Iniciar sesión </button>
+      <Link href="/login" className={styles.button}>
+        Iniciar sesión
+      </Link>
     </header>
   );
 }

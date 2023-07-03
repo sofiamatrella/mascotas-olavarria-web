@@ -1,35 +1,29 @@
 "use client";
 
 import { Formik, Form } from "formik";
-import styles from "../../../styles/Login.module.css";
-import Link from "next/link";
-import User, { userLogin } from "@/models/User";
-import FormikTextField from "@/components/FormikTextField";
-import { LoginSchema } from "@/utils/validation/UserValidation";
-import AuthService from "@/services/AuthService";
-import { useContext, useState } from "react";
-import { useRouter } from "next/navigation";
 import { CircularProgress } from "@mui/material";
-import LoggedContext from "@/context/LoggedContext";
+import styles from "../../../styles/Register.module.css";
+import Link from "next/link";
+import User, { userRegister } from "@/models/User";
+import { RegisterSchema } from "@/utils/validation/UserValidation";
+import FormikTextField from "@/components/FormikTextField";
+import AuthService from "@/services/AuthService";
+import { useRouter } from "next/navigation";
+import { useState } from "react";
 
-export default function Login() {
+export default function Register() {
+  const router = useRouter();
+
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
 
-  const router = useRouter();
-
-  const { handleLogIn } = useContext(LoggedContext);
-
-  const handleLogin = (values: User) => {
+  const handleRegister = (values: User) => {
     setLoading(true);
-    AuthService.login(values)
+    AuthService.register(values)
       .then(async (res) => {
         const response = await res.json();
-        if (res.ok) {
-          AuthService.saveToken(response.authToken, response.refreshToken);
-          handleLogIn();
-          router.push("/");
-        } else {
+        if (res.ok) router.push("/login");
+        else {
           setLoading(false);
           setError(response.message);
         }
@@ -43,20 +37,36 @@ export default function Login() {
   return (
     <div className={styles.container}>
       <div className={styles.form_container}>
-        <Link href="/">
-          <img src="/images/logo.png" alt="" width="90px" />
-        </Link>
-        <h1 className={styles.title}>Iniciar sesión</h1>
+        <h1 className={styles.title}>Registrarse</h1>
         <p className={styles.error}>{error}</p>
         <Formik
-          initialValues={userLogin}
-          validationSchema={LoginSchema}
+          initialValues={userRegister}
+          validationSchema={RegisterSchema}
           onSubmit={(values) => {
-            handleLogin(values);
+            console.log(values);
+            handleRegister(values);
           }}
         >
           {({ handleChange, handleBlur }) => (
             <Form className={styles.form}>
+              <FormikTextField
+                id="firstName"
+                label="Nombre"
+                handleChange={handleChange("firstName")}
+                handleBlur={handleBlur("firstName")}
+              />
+              <FormikTextField
+                id="lastName"
+                label="Apellido"
+                handleChange={handleChange("lastName")}
+                handleBlur={handleBlur("lastName")}
+              />
+              <FormikTextField
+                id="username"
+                label="Usuario"
+                handleChange={handleChange("username")}
+                handleBlur={handleBlur("username")}
+              />
               <FormikTextField
                 id="email"
                 label="Email"
@@ -70,6 +80,7 @@ export default function Login() {
                 handleBlur={handleBlur("password")}
                 type="password"
               />
+
               <button
                 type="submit"
                 disabled={loading}
@@ -83,16 +94,16 @@ export default function Login() {
                     sx={{ position: "absolute", color: "#435021" }}
                   />
                 )}
-                Iniciar sesión
+                Registrarse
               </button>
             </Form>
           )}
         </Formik>
         <p className={styles.text}>
-          ¿Todavía no tenés cuenta?{" "}
-          <Link href="/registro" className={styles.link}>
+          ¿Ya tenés cuenta?{" "}
+          <Link href="/login" className={styles.link}>
             {" "}
-            ¡Registrate!
+            ¡Inicia sesión!
           </Link>
         </p>
       </div>
