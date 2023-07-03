@@ -43,7 +43,6 @@ export default function Register() {
           initialValues={userRegister}
           validationSchema={RegisterSchema}
           onSubmit={(values) => {
-            console.log(values);
             handleRegister(values);
           }}
         >

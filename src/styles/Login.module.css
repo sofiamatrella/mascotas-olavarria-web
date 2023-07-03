@@ -95,4 +95,19 @@
 .error {
   color: #d32f2f;
   font-weight: 600;
+  margin-bottom: 10px;
+}
+
+@media (320px <= width <= 480px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .image_container {
+    display: none;
+  }
+
+  .form_container {
+    width: 100%;
+  }
 }
