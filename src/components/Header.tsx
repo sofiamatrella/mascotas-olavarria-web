@@ -68,7 +68,7 @@ export default function Header() {
         ))}
       </nav>
       {isLoggedIn ? (
-        <UserCircleIcon width="45px" color="#435021" />
+        <UserCircleIcon width="45px" color="#435021" className={styles.icon} />
       ) : (
         <Link href="/login" className={styles.button}>
           Iniciar sesión
