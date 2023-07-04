@@ -52,9 +52,11 @@ export default function Header() {
 
   return (
     <header className={styles.container}>
-      <Link href="/">
-        <img src="/images/logo.png" alt="Logo" width="55px" />
-      </Link>
+      <div className={styles.logo}>
+        <Link href="/">
+          <img src="/images/logo.png" alt="Logo" width="55px" />
+        </Link>
+      </div>
       <nav className={styles.navigation}>
         <Link href="/" className={styles.link}>
           Inicio
@@ -67,15 +69,21 @@ export default function Header() {
           />
         ))}
       </nav>
-      {isLoggedIn ? (
-        <UserCircleIcon width="45px" color="#435021" className={styles.icon} />
-      ) : (
-        <Link href="/login" className={styles.button}>
-          Iniciar sesión
-        </Link>
-      )}
-      <div className={styles.mobile_menu}>
-        <MobileMenu pages={pages} />
+      <div className={styles.button_container}>
+        {isLoggedIn ? (
+          <UserCircleIcon
+            width="45px"
+            color="#435021"
+            className={styles.icon}
+          />
+        ) : (
+          <Link href="/login" className={styles.button}>
+            Iniciar sesión
+          </Link>
+        )}
+        <div className={styles.mobile_menu}>
+          <MobileMenu pages={pages} />
+        </div>
       </div>
     </header>
   );

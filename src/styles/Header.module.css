@@ -28,6 +28,17 @@
   -webkit-backdrop-filter: blur(6.5px);
 }
 
+.logo,
+.button_container {
+  display: flex;
+  flex-basis: 0px;
+  flex-grow: 1;
+}
+
+.button_container {
+  justify-content: flex-end;
+}
+
 .navigation {
   display: flex;
   align-items: center;
