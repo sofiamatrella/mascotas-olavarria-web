@@ -17,7 +17,7 @@ const pages: Page[] = [
       {
         name: "Adoptar",
         description: "Ver perros y gatos disponibles para adopción",
-        href: "##",
+        href: "/adoptar",
         icon: HeartIcon,
       },
       {

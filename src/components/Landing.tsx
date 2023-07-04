@@ -10,7 +10,7 @@ export default function Landing() {
         </h2>
         <h2 className={styles.text}>UNA VIDA</h2>
         <div className={styles.buttons_container}>
-          <Link href="#" className={styles.button}>
+          <Link href="/adoptar" className={styles.button}>
             Adoptar
           </Link>
           <Link href="#" className={styles.button}>
