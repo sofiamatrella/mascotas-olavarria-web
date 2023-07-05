@@ -3,6 +3,8 @@
 import Header from "@/components/Header";
 import LoggedContext from "@/context/LoggedContext";
 import { useContext, useEffect } from "react";
+import { ThemeProvider } from "@mui/material";
+import theme from "@/MUITheme";
 
 export default function RootLayout({
   children,
@@ -18,9 +20,11 @@ export default function RootLayout({
   }, []);
 
   return (
-    <div style={{ padding: "10px" }}>
-      <Header />
-      {children}
-    </div>
+    <ThemeProvider theme={theme}>
+      <div style={{ padding: "10px" }}>
+        <Header />
+        {children}
+      </div>
+    </ThemeProvider>
   );
 }
