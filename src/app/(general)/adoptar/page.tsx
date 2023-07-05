@@ -5,7 +5,7 @@ export default function Adopt() {
   return (
     <div className={styles.container}>
       <div className={styles.card_container}>
-        <Link href="adoptar/##" className={styles.card}>
+        <Link href="adoptar/gatos" className={styles.card}>
           <img
             src="https://images.pexels.com/photos/1404819/pexels-photo-1404819.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
             alt="cat stock image"
@@ -13,7 +13,7 @@ export default function Adopt() {
           ></img>
           <p className={styles.text}>GATOS</p>
         </Link>
-        <Link href="adoptar/#" className={styles.card}>
+        <Link href="adoptar/perros" className={styles.card}>
           <img
             src="https://images.pexels.com/photos/2607546/pexels-photo-2607546.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
             alt="dog stock image"
