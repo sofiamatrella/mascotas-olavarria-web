@@ -62,8 +62,7 @@
 }
 
 .icon {
-  height: 1.25rem;
-  width: 1.25rem;
+  max-width: 1.25rem;
   color: #36401b;
   transition: 0.2s ease-in-out;
 }
