@@ -1,0 +1,41 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  max-width: 18rem;
+  background-color: #efffca;
+  border: 2px solid #435021;
+  box-shadow: 8px 8px 0 #435021;
+  border-radius: 0.25rem;
+  transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 0.5rem 0.5rem;
+  gap: 1.5rem;
+}
+
+.container:hover {
+  box-shadow: 0px 0px 0;
+  transform: translateY(2px) translateX(2px);
+}
+
+.info {
+  border-top: 2px solid #1a200d;
+  padding-top: 0.5rem;
+}
+
+.title {
+  font-family: var(--poppins-font);
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: #1a200d;
+}
+
+.text {
+  font-family: var(--poppins-font);
+  color: rgba(67, 80, 33, 0.9);
+  font-weight: 500;
+}
+
+.image {
+  border-radius: 0.25rem;
+  aspect-ratio: 5/6;
+  object-fit: cover;
+}
