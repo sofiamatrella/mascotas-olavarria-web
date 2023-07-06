@@ -1,7 +1,7 @@
 import PetCard from "@/models/Pet";
 import styles from "@/styles/PetCard.module.css";
 
-export default function PetCard({ name, sex, age, size, image }: PetCard) {
+export default function PetCard({ name, sex, age, size, image, id }: PetCard) {
   return (
     <div className={styles.container}>
       <img src={image} alt="stock image" className={styles.image} />

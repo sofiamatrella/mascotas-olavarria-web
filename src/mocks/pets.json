@@ -1,6 +1,7 @@
 {
   "pets": [
     {
+      "id": "1",
       "name": "Mochi",
       "age": "2 años",
       "sex": "Hembra",
@@ -9,6 +10,7 @@
       "image": "https://images.pexels.com/photos/3777622/pexels-photo-3777622.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
     },
     {
+      "id": "2",
       "name": "Messi",
       "age": "3 meses",
       "sex": "Macho",
@@ -17,6 +19,7 @@
       "image": "https://images.pexels.com/photos/1605275/pexels-photo-1605275.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
     },
     {
+      "id": "3",
       "name": "Milo",
       "age": "5 años",
       "sex": "Macho",

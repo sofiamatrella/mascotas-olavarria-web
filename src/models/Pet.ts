@@ -1,6 +1,7 @@
 export default interface PetCard {
+  id: string;
   name: string;
-  age: number;
+  age: string;
   size: string;
   sex: string;
   image: string;

@@ -12,11 +12,13 @@ export default function AdoptionComponent({ species }: { species: string }) {
       <div className={styles.cards_container}>
         {filteredPets.map((pet) => (
           <PetCard
+            id={pet.id}
             age={pet.age}
             name={pet.name}
             size={pet.size}
             sex={pet.sex}
             image={pet.image}
+            key={pet.name}
           />
         ))}
       </div>
