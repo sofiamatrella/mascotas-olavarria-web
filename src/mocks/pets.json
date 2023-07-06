@@ -1,0 +1,28 @@
+{
+  "pets": [
+    {
+      "name": "Mochi",
+      "age": "2 años",
+      "sex": "Hembra",
+      "size": "Mediana",
+      "species": "cat",
+      "image": "https://images.pexels.com/photos/3777622/pexels-photo-3777622.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    },
+    {
+      "name": "Messi",
+      "age": "3 meses",
+      "sex": "Macho",
+      "size": "Pequeño",
+      "species": "cat",
+      "image": "https://images.pexels.com/photos/1605275/pexels-photo-1605275.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    },
+    {
+      "name": "Milo",
+      "age": "5 años",
+      "sex": "Macho",
+      "size": "Mediano",
+      "species": "dog",
+      "image": "https://images.pexels.com/photos/1078089/pexels-photo-1078089.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    }
+  ]
+}
