@@ -28,11 +28,6 @@ class AuthService {
 
     return res;
   }
-
-  saveToken(token: string, refreshToken: string) {
-    localStorage.setItem("auth-token", JSON.stringify(token));
-    localStorage.setItem("refresh-token", JSON.stringify(refreshToken));
-  }
 }
 
 export default new AuthService();

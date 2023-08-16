@@ -26,7 +26,6 @@ export default function Login() {
       .then(async (res) => {
         const response = await res.json();
         if (res.ok) {
-          AuthService.saveToken(response.authToken, response.refreshToken);
           handleLogIn();
           router.push("/");
         } else {

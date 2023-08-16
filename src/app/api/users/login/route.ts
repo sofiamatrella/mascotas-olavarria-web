@@ -1,9 +1,9 @@
 import prisma from "@/lib/prisma";
-import userDTOFactory from "../../DTOs/user-dto-factory";
 import { User } from "@prisma/client";
 import { NextResponse } from "next/server";
 import bcrypt from "bcrypt";
-import jwt from "jsonwebtoken";
+import { SignJWT } from "jose";
+import AuthUtils from "@/utils/AuthUtils";
 
 export async function POST(request: Request) {
   const body: User = await request.json();
@@ -27,19 +27,23 @@ export async function POST(request: Request) {
         { status: 401 }
       );
 
-    const token = jwt.sign(
-      { id: user.externalId, shelter: user.shelter, role: user.role },
-      process.env.TOKEN_SECRET as string,
-      { expiresIn: "1h" }
-    );
+    const token = await new SignJWT({
+      id: user.externalId,
+      shelter: user.shelter,
+      role: user.role,
+    })
+      .setProtectedHeader({ alg: "HS256" })
+      .setIssuedAt()
+      .setExpirationTime("1h")
+      .sign(AuthUtils.getJwtSecretKey());
 
-    const refreshToken = jwt.sign(
-      { email: user.email },
-      process.env.REFRESH_TOKEN_SECRET as string,
-      { expiresIn: "7d" }
-    );
+    const response = NextResponse.json({
+      authToken: token,
+    });
 
-    return NextResponse.json({ authToken: token, refreshToken: refreshToken });
+    response.cookies.set({ name: "auth-token", value: token, path: "/" });
+
+    return response;
   } catch (error) {
     console.log(error);
     return NextResponse.json(

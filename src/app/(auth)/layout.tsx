@@ -1,4 +1,3 @@
-import { LoggedProvider } from "@/context/LoggedContext";
 import { poppins, raleway } from "../fonts";
 
 export const metadata = {
