@@ -50,6 +50,20 @@ const pages: Page[] = [
 export default function Header() {
   const { isLoggedIn } = useContext(LoggedContext);
 
+  const getButton = () => {
+    if (isLoggedIn) {
+      return (
+        <UserCircleIcon width="45px" color="#435021" className={styles.icon} />
+      );
+    } else {
+      return (
+        <Link href="/login" className={styles.button}>
+          Iniciar sesión
+        </Link>
+      );
+    }
+  };
+
   return (
     <header className={styles.container}>
       <div className={styles.logo}>
@@ -70,17 +84,7 @@ export default function Header() {
         ))}
       </nav>
       <div className={styles.button_container}>
-        {isLoggedIn ? (
-          <UserCircleIcon
-            width="45px"
-            color="#435021"
-            className={styles.icon}
-          />
-        ) : (
-          <Link href="/login" className={styles.button}>
-            Iniciar sesión
-          </Link>
-        )}
+        {isLoggedIn !== null ? getButton() : null}
         <div className={styles.mobile_menu}>
           <MobileMenu pages={pages} />
         </div>

@@ -5,7 +5,7 @@ import Children from "../models/Children";
 import { getCookie } from "cookies-next";
 
 interface LoggedContextProps {
-  isLoggedIn: boolean;
+  isLoggedIn: boolean | null;
   handleLogIn: () => void;
   handleLogOut: () => void;
 }
@@ -19,11 +19,12 @@ const defaultState = {
 const LoggedContext = createContext<LoggedContextProps>(defaultState);
 
 const LoggedProvider = (props: Children) => {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState<boolean | null>(null);
   const token = getCookie("auth-token");
 
   useEffect(() => {
     if (token) handleLogIn();
+    else setIsLoggedIn(false);
   }, []);
 
   const handleLogIn = () => {
