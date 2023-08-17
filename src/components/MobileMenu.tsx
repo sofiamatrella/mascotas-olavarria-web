@@ -1,63 +1,13 @@
 "use client";
 
 import { useContext, useState } from "react";
-import {
-  ArrowPathIcon,
-  Bars3Icon,
-  ChartPieIcon,
-  CursorArrowRaysIcon,
-  FingerPrintIcon,
-  SquaresPlusIcon,
-  XMarkIcon,
-} from "@heroicons/react/24/outline";
+import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { Dialog, Disclosure } from "@headlessui/react";
-import {
-  ChevronDownIcon,
-  PhoneIcon,
-  PlayCircleIcon,
-  UserCircleIcon,
-} from "@heroicons/react/20/solid";
+import { ChevronDownIcon, UserCircleIcon } from "@heroicons/react/20/solid";
 import styles from "../styles/MobileMenu.module.css";
 import Link from "next/link";
 import LoggedContext from "@/context/LoggedContext";
 import Page from "@/models/Menu";
-
-// const products = [
-//   {
-//     name: "Analytics",
-//     description: "Get a better understanding of your traffic",
-//     href: "#",
-//     icon: ChartPieIcon,
-//   },
-//   {
-//     name: "Engagement",
-//     description: "Speak directly to your customers",
-//     href: "#",
-//     icon: CursorArrowRaysIcon,
-//   },
-//   {
-//     name: "Security",
-//     description: "Your customers’ data will be safe and secure",
-//     href: "#",
-//     icon: FingerPrintIcon,
-//   },
-//   {
-//     name: "Integrations",
-//     description: "Connect with third-party tools",
-//     href: "#",
-//     icon: SquaresPlusIcon,
-//   },
-//   {
-//     name: "Automations",
-//     description: "Build strategic funnels that will convert",
-//     href: "#",
-//     icon: ArrowPathIcon,
-//   },
-// ];
-// const callsToAction = [
-//   { name: "Watch demo", href: "#", icon: PlayCircleIcon },
-//   { name: "Contact sales", href: "#", icon: PhoneIcon },
-// ];
 
 export default function MobileMenu({ pages }: { pages: Page[] }) {
   const [open, setOpen] = useState(false);

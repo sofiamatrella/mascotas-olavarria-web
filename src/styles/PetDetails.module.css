@@ -1,0 +1,53 @@
+.container {
+  height: fit-content;
+  padding: 10px;
+  width: 100%;
+}
+
+.info_slider {
+  min-height: calc(100vh - 120px);
+  display: flex;
+  gap: 3rem;
+  padding: 20px 0px;
+}
+
+.title_share {
+  margin-bottom: 1.5rem;
+}
+
+.share {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.basic_info {
+  display: flex;
+  gap: 3rem;
+  background-color: #dde5b6;
+  padding: 10px 20px;
+  border-radius: 0.5rem;
+}
+
+.item {
+  text-align: center;
+}
+
+.title {
+  font-size: 3rem;
+  font-family: var(--poppins-font);
+  font-weight: 600;
+  color: #1a200d;
+}
+
+.subtitle {
+  font-family: var(--poppins-font);
+  font-weight: 500;
+  color: #435021;
+  text-align: center;
+}
+
+.text {
+  font-family: var(--poppins-font);
+  text-align: center;
+}

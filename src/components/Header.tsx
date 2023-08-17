@@ -6,7 +6,7 @@ import { HeartIcon, MegaphoneIcon } from "@heroicons/react/24/outline";
 import { UserCircleIcon } from "@heroicons/react/20/solid";
 import Page from "@/models/Menu";
 import Link from "next/link";
-import { useContext, useEffect } from "react";
+import { useContext } from "react";
 import LoggedContext from "@/context/LoggedContext";
 import MobileMenu from "./MobileMenu";
 
@@ -23,7 +23,7 @@ const pages: Page[] = [
       {
         name: "Dar en adopción",
         description: "Publica tus mascotas en adopción",
-        href: "##",
+        href: "/dar-en-adopcion",
         icon: MegaphoneIcon,
       },
     ],
@@ -48,7 +48,7 @@ const pages: Page[] = [
 ];
 
 export default function Header() {
-  const { isLoggedIn, handleLogIn } = useContext(LoggedContext);
+  const { isLoggedIn } = useContext(LoggedContext);
 
   return (
     <header className={styles.container}>

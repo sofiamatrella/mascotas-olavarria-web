@@ -13,7 +13,7 @@ export default function Landing() {
           <Link href="/adoptar" className={styles.button}>
             Adoptar
           </Link>
-          <Link href="#" className={styles.button}>
+          <Link href="/dar-en-adopcion" className={styles.button}>
             Dar en adopción
           </Link>
         </div>
