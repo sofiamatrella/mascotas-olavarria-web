@@ -29,7 +29,9 @@ model Pet {
   species     Species
   name        String
   sex         Sex
-  age         Int
+  ageYear     Int
+  ageMonth    Int
+  ageLabel    String
   size        Size
   description String
   status      Status
