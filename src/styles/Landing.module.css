@@ -1,9 +1,10 @@
 .container {
-  height: 100%;
+  height: calc(100vh - 110px);
   width: 100%;
   margin-top: 15px;
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 3rem;
 }
 
@@ -12,11 +13,14 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 }
 
 .text {
-  font-size: 3.75rem;
+  text-align: center;
+  font-size: 4.5rem;
   line-height: 1.2;
+  text-wrap: balance;
 }
 
 .text_bold {
@@ -43,6 +47,9 @@
   font-weight: 700;
   font-size: 1rem;
   transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  text-align: center;
+  display: flex;
+  align-items: center;
 }
 
 .button:hover {

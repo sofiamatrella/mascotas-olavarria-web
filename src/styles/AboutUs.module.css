@@ -29,7 +29,8 @@
 .text {
   font-family: var(--poppins-font);
   font-weight: 400;
-  margin-bottom: 10px;
+  margin-bottom: 30px;
+  font-size: 1.2rem;
 }
 
 .text_bold {

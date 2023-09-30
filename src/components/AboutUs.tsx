@@ -1,4 +1,6 @@
 import styles from "../styles/AboutUs.module.css";
+import AboutUsImage from "../../public/images/aboutus-image.png";
+import Image from "next/image";
 
 export default function AboutUs() {
   return (
@@ -36,9 +38,9 @@ export default function AboutUs() {
           </p>
         </div>
         <div className={styles.image_container}>
-          <img
-            src="/images/aboutus-image.png"
-            alt=""
+          <Image
+            src={AboutUsImage}
+            alt="Imagen de un gato"
             style={{ objectFit: "contain" }}
           />
         </div>
