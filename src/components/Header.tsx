@@ -9,6 +9,7 @@ import Link from "next/link";
 import { useContext } from "react";
 import LoggedContext from "@/context/LoggedContext";
 import MobileMenu from "./MobileMenu";
+import Image from "next/image";
 
 const pages: Page[] = [
   {
@@ -68,7 +69,7 @@ export default function Header() {
     <header className={styles.container}>
       <div className={styles.logo}>
         <Link href="/">
-          <img src="/images/logo.png" alt="Logo" width="55px" />
+          <Image src="/images/logo.png" alt="Logo" width={55} height={55} />
         </Link>
       </div>
       <nav className={styles.navigation}>
