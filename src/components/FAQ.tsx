@@ -3,13 +3,14 @@
 import { Disclosure } from "@headlessui/react";
 import { ChevronUpIcon } from "@heroicons/react/20/solid";
 import styles from "../styles/FAQ.module.css";
+import { useState } from "react";
 
 export default function FAQ() {
   return (
     <div className={styles.container}>
       <h2 className={styles.title}>Preguntas frecuentes</h2>
       <div className={styles.disclosure_container}>
-        <Disclosure>
+        <Disclosure defaultOpen>
           {({ open }) => (
             <>
               <Disclosure.Button className={styles.disclosure_button}>
@@ -30,7 +31,7 @@ export default function FAQ() {
             </>
           )}
         </Disclosure>
-        <Disclosure as="div" style={{ marginTop: "0.5rem" }}>
+        <Disclosure as="div" style={{ marginTop: "0.5rem" }} defaultOpen>
           {({ open }) => (
             <>
               <Disclosure.Button className={styles.disclosure_button}>
@@ -48,7 +49,7 @@ export default function FAQ() {
             </>
           )}
         </Disclosure>
-        <Disclosure as="div" style={{ marginTop: "0.5rem" }}>
+        <Disclosure as="div" style={{ marginTop: "0.5rem" }} defaultOpen>
           {({ open }) => (
             <>
               <Disclosure.Button className={styles.disclosure_button}>
@@ -65,7 +66,7 @@ export default function FAQ() {
             </>
           )}
         </Disclosure>
-        <Disclosure as="div" style={{ marginTop: "0.5rem" }}>
+        <Disclosure as="div" style={{ marginTop: "0.5rem" }} defaultOpen>
           {({ open }) => (
             <>
               <Disclosure.Button className={styles.disclosure_button}>
@@ -86,7 +87,7 @@ export default function FAQ() {
             </>
           )}
         </Disclosure>
-        <Disclosure as="div" style={{ marginTop: "0.5rem" }}>
+        <Disclosure as="div" style={{ marginTop: "0.5rem" }} defaultOpen>
           {({ open }) => (
             <>
               <Disclosure.Button className={styles.disclosure_button}>
