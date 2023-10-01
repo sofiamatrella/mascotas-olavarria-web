@@ -69,7 +69,12 @@ export default function Header() {
     <header className={styles.container}>
       <div className={styles.logo}>
         <Link href="/">
-          <Image src="/images/logo.png" alt="Logo" width={55} height={55} />
+          <Image
+            src="/images/logo.png"
+            alt="Logo de Mascotas Olavarría"
+            width={55}
+            height={55}
+          />
         </Link>
       </div>
       <nav className={styles.navigation}>

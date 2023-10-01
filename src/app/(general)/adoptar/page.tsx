@@ -1,21 +1,24 @@
 import styles from "@/styles/Adopt.module.css";
+import Image from "next/image";
 import Link from "next/link";
+import CatImage from "@/../public/images/CatImage.jpg";
+import DogImage from "@/../public/images/DogImage.jpg";
 
 export default function Adopt() {
   return (
     <div className={styles.container}>
       <div className={styles.card_container}>
         <Link href="adoptar/gatos" className={styles.card}>
-          <img
-            src="https://images.pexels.com/photos/1404819/pexels-photo-1404819.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-            alt="cat stock image"
+          <Image
+            src={CatImage}
+            alt="Imagen de un gato"
             className={styles.image}
-          ></img>
+          ></Image>
           <p className={styles.text}>GATOS</p>
         </Link>
         <Link href="adoptar/perros" className={styles.card}>
-          <img
-            src="https://images.pexels.com/photos/2607546/pexels-photo-2607546.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+          <Image
+            src={DogImage}
             alt="dog stock image"
             className={styles.image}
           />
