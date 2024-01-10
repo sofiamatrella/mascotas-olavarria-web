@@ -11,7 +11,7 @@ export default function PetCardComponent({
   id,
 }: PetCard) {
   return (
-    <Link href={`adoptar/detalles/${id}`} className={styles.container}>
+    <Link href={`detalles/${id}`} className={styles.container}>
       <img src={image} alt="stock image" className={styles.image} />
       <div className={styles.info}>
         <h2 className={styles.title}> {name} </h2>

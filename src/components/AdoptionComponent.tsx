@@ -1,10 +1,10 @@
-import { pets } from "@/mocks/pets.json";
+import pets from "../mocks/pets.json"
 import Filters from "@/components/Filters";
 import styles from "@/styles/Adoption.module.css";
 import PetCard from "./PetCard";
 
 export default function AdoptionComponent({ species }: { species: string }) {
-  const filteredPets = pets.filter((pet) => pet.species === species);
+  const filteredPets = pets.pets.filter((pet) => pet.species === species);
 
   return (
     <div className={styles.container}>
